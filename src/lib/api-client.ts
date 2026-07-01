@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || https://chainpulse.173.212.193.239.sslip.io;
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://chainpulse.173.212.193.239.sslip.io";
 
 export class APIError extends Error {
   status: number;
