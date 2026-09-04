@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ChainPulse Web
+
+A real-time blockchain analytics and event monitoring web platform built with **Next.js App Router**, **React 19**, **TypeScript**, and **TanStack**.
+
+---
+
+## Overview
+
+ChainPulse provides real-time visibility into blockchain transactions, contract events, and network metrics. The web frontend is engineered for low latency, smooth table virtualization, and responsive data streaming across active chains.
+
+---
+
+## Technical Highlights
+
+- **Next.js App Router**: Route-group architecture separating core application views (`(app)`) from documentation (`(docs)`).
+- **React 19 & React Compiler**: Optimized component rendering and memoization.
+- **Server & Client State Management**: `@tanstack/react-query` for optimistic caching, background re-fetching, and query invalidation.
+- **High-Performance Data Tables**: `@tanstack/react-table` handling complex sorting, filtering, and streaming transaction feeds.
+- **Design System**: Tailwind CSS paired with Lucide React icons for a clean, responsive dark-mode interface.
+
+---
+
+## Project Structure
+
+```
+├── public/                 # Static assets and icons
+├── src/
+│   ├── app/
+│   │   ├── (app)/          # Main dashboard views & streaming tables
+│   │   ├── (docs)/         # API & integration documentation
+│   │   ├── globals.css     # Design tokens and Tailwind utility layers
+│   │   └── providers.tsx   # React Query and theme context providers
+│   ├── components/
+│   │   └── ui/             # Reusable design system primitives
+│   └── lib/                # Utility helpers and API clients
+├── next.config.ts          # Next.js configuration
+├── tsconfig.json           # Strict TypeScript configuration
+└── package.json            # Project dependencies and scripts
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Prerequisites
+- Node.js 18+
+- pnpm (recommended) or npm
 
+### 2. Installation
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/tobiebenezer/chainpulse_web.git
+cd chainpulse_web
+
+pnpm install
+# or: npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Development Server
+Start the local Next.js development server:
+```bash
+pnpm dev
+# or: npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Production Build
+Create an optimized production build:
+```bash
+pnpm build
+pnpm start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Category | Technology |
+| :--- | :--- |
+| **Framework** | Next.js 16 (App Router) |
+| **UI Library** | React 19, Tailwind CSS, Lucide React |
+| **Data Fetching** | TanStack React Query v5 |
+| **Table & Virtualization** | TanStack React Table v8 |
+| **Language** | TypeScript 5 (Strict Mode) |
+| **Code Quality** | ESLint 9 |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by [Tobi Ebenezer](https://github.com/tobiebenezer). MIT License.
